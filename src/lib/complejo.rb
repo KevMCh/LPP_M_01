@@ -22,7 +22,7 @@ class Complejo
 
 	def *(oper)
 	  
-	  Complejo.new(@r * oper.r - @i * oper.i, @r * oper.i + @r * oper.r)
+	  Complejo.new(@r * oper.r - @i * oper.i, @r * oper.i + @i * oper.r)
 
 
 	end
