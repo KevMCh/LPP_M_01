@@ -10,23 +10,20 @@ class Complejo
 
 	def to_s
 
-    		"#{@r}, #{@i} i"
+    		"#{@r} + #{@i} i"
   	end
 
 	def +(oper)
 
-		Complejo.new (@r +  oper.r, @i + oper.i)
+		Complejo.new(@r + oper.r , @i + oper.i)
 
 	end
 
 
 	def *(oper)
 	  
-	  Complejo.new (@r * oper.r - @i * oper.i, @r * oper.i + @r * oper.r)
-	                
-	  
-		# @r = oper1.r * oper2.r - oper1.i * oper2.i
-		# @i = oper1.r * oper2.i + oper1.r * oper2.r
+	  Complejo.new(@r * oper.r - @i * oper.i, @r * oper.i + @r * oper.r)
+
 
 	end
 
@@ -41,19 +38,14 @@ class Complejo
 	
 	def -(oper)
 	  
-	  Complejo.new (@r - oper.r, @i - oper.i)
+	  Complejo.new( @r - oper.r, @i - oper.i)
 
 	end
 	
 	
 	def /(oper)
-	  
-		Complejo.new ((@r * oper.r + @i*oper.i)/(oper.r * oper.r + oper.i *oper.i),(@i*oper.r + @r*oper.i)/(oper.r*oper.r+oper.i*oper.i))
-		    
-		    
-		    
-	#	@r = (oper1.r*oper2.r + oper1.i*oper2.i)/(oper2.r*oper2.r+oper2.i*oper2.i)
-	#	@i=(oper1.i*oper2.r + oper1.r*oper2.i)/(oper2.r*oper2.r+oper2.i*oper2.i)
+
+		Complejo.new(((@r * oper.r + @i*oper.i)/(oper.r * oper.r + oper.i * oper.i)) , ((@i*oper.r + @r*oper.i)/(oper.r*oper.r+oper.i*oper.i)))
 
 	end
 
