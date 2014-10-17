@@ -1,4 +1,4 @@
-require './complejo.rb'
+require 'lib/complejo.rb'
 require 'test/unit'
 
 class TestPoint < Test::Unit::TestCase
